@@ -7,4 +7,6 @@ if ( strcasecmp($a,$b)==0 ) {
 } else {
 	echo "$a NÃO é igual à $b";
 }
+
+echo strcasecmp($a,$b);
 ?>

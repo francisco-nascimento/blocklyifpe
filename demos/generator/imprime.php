@@ -6,7 +6,7 @@
 
 
 	
-	$stmt = $conn->prepare('SELECT * FROM resposta WHERE id = 1');
+	$stmt = $conn->prepare('SELECT * FROM resposta WHERE id = 3');
     
     $stmt->execute(array('id' => $id));
 
@@ -15,7 +15,7 @@
 
     $respostaTeste = $row[1];
 
-    if ( strcasecmp($resposta,$respostaTeste)==0 ) {
+    if ( strcasecmp($resposta,$respostaTeste) == 0 ) {
     	echo "$respostaTeste";
     	echo "Acertou, mizerave!";
     }else{
@@ -25,5 +25,7 @@
     	echo "Sua resposta : $resposta";
     
     }
+
+    echo strcasecmp($resposta,$respostaTeste);
 	
 ?>

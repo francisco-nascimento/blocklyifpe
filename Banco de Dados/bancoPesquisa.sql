@@ -26,7 +26,7 @@ primary key(id)
 
 create table Problema (
 id int AUTO_INCREMENT,
-desc_Problema text(50000),
+desc_Problema text(10000),
 id_Professor int,
 classificacao varchar(10),
 data_Alteracao timestamp default current_timestamp,

@@ -52,3 +52,9 @@ primary key (id),
 foreign key (id_Aluno) references Aluno (id)
 );
 
+create table cadastro(
+	id int primary key auto_increment,
+	nome varchar (40) not null,
+	senha varchar(100) not null,
+	email varchar (40) not null
+);

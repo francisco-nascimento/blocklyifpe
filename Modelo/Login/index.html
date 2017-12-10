@@ -9,6 +9,24 @@
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript">
+
+
+        function validaSenha(){
+
+          var senha = document.getElementById("senha")
+          var confirmaSenha = document.getElementById("confirmaSenha");
+
+          if(senha.value != confirmaSenha.value) {
+            alert("Senhas diferentes, por favor insira as senha iguais!");
+              confirmaSenha.focus();
+                return false;
+          }
+
+                         
+        }
+          
+    </script>
  
 </head>
 
@@ -21,16 +39,37 @@
 </div>
 <div class="form">
   <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"/></div>
+  <form action="inserindo_dados_banco.php" method="POST" onsubmit="return validaSenha();"></form>
   <form class="register-form">
-    <input type="text" placeholder="name"/>
-    <input type="password" placeholder="password"/>
-    <input type="text" placeholder="email address"/>
-    <button>create</button>
+  	<label>
+      Insira seu nome
+    </label>
+    <input type="text" required autocomplete="off" placeholder="Fulano de Tal"/>
+    <label>
+      Insira uma senha
+    </label>
+    <input type="password" required autocomplete="off" id="senha" placeholder="123456"/>
+    <label>
+      Repita a senha
+    </label>
+    <input type="password" required autocomplete="off" id="confirmaSenha" placeholder="123456"/>
+    <label>
+      Insira um email
+    </label>
+    <input type="text" required autocomplete="off" placeholder="fulano@gmail.com"/>
+    <button>criar</button>
     <p class="message">Já registrado? <a href="#">Sign In</a></p>
+
   </form>
   <form class="login-form">
-    <input type="text" placeholder="username"/>
-    <input type="password" placeholder="password"/>
+  	<label>
+       Email 
+    </label>
+    <input type="text" required autocomplete="off" placeholder="fulano@gmail.com"/>
+    <label>
+      Senha
+    </label>
+    <input type="password" required autocomplete="off" placeholder="123456"/>
     <button>login</button>
     <p class="message">Não registrado? <a href="#">Crie uma conta</a></p>
   </form>

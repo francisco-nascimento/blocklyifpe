@@ -26,22 +26,15 @@
   <body id="page-top">
 
     <!-- Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.html">Blockly</a>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto"> 
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="problemas.html">Problemas</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="login/index.html" >Login</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<?php
 
+    if (!isset($_SESSION['id'])){
+            header('Location: Login/index.php');
+        }
+
+  require 'verifica.php';
+
+?>
 
     <br><br><br><br><br><br><br><br><br><br>
     <center>
@@ -49,7 +42,7 @@
       <h3>Problemas com Loop</h3>
     </div>
     <div class="form-group floating-label-form-group controls">
-        <a href="exemplos/exemplo1/blockly/demos/blockly.exemplo/problema1.html">Problema 1 </a>       
+        <a href="exemplos/exemplo1/blockly/demos/blockly.exemplo/problema1.php">Problema 1 </a>       
     <div>
     <div class="form-group floating-label-form-group controls">
         <a href="exemplos/exemplo1/blockly/demos/blockly.exemplo/problema2.html">Problema 2 </a>       

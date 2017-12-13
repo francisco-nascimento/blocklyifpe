@@ -60,6 +60,12 @@
     <input type="text" required autocomplete="off" placeholder="fulano@gmail.com"/ name="email">
     <button>criar</button>
     <p class="message">Já registrado? <a href="#">Sign In</a></p>
+	<label> Professor:</label>
+	<input type="radio" name="professor" value="1"> <br>
+	
+	<label>Aluno:</label>
+	<input type="radio" name="professor" value="0"> <br>
+
 
   </form>
   <form class="login-form">

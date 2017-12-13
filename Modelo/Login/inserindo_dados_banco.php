@@ -3,11 +3,20 @@
 	try{
 
 			
-			$conexao = new PDO('mysql:host=localhost;dbname=projeto', "root", "1994");
+			$conexao = new PDO('mysql:host=localhost;dbname=pesquisa', "root", "1994");
 
 			$conexao->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-			$stmt = $conexao->prepare("insert into cadastro (nome, senha, email) values (?,?,?)");
+			$inserirAluno = "insert into Aluno (nome, senha, email) values (?,?,?)";
+		
+			$inserirProfessor = "insert into Professor (nome, senha, email) values (?,?,?)";
+			
+			if($_POST['professor'] == 1){
+
+			$stmt = $conexao->prepare($inserirProfessor);
+			}else{
+				$stmt = $conexao->prepare($inserirAluno);
+			}
 			
 				session_start();
 				$nome = $_POST["nome"];
